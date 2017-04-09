@@ -1,0 +1,10 @@
+**/.idea
+*~
+*.swp
+*.o
+*.so
+build
+dist
+*.egg-info/
+**/build/*
+
