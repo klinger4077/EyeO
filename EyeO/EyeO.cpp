@@ -11,11 +11,12 @@ using namespace std;
 
 int main()
 {
-	 int blinkCount = 0; 
-    int initialIterations = 0;
-	 int warningCounter = 0;
-            double leftAvg = 0;
-            double rightAvg = 0;
+	int blinkCount = 0; 
+   int initialIterations = 0;
+	int warningCounter = 0;
+   double leftAvg = 0;
+   double rightAvg = 0;
+
 	wiringPiSetup();
 	pinMode(0, OUTPUT);
 	digitalWrite(0,LOW);	
@@ -168,7 +169,7 @@ int main()
 							}
                 }
 					 if(warningCounter){
-						if(warningCounter == 15) {
+						if(warningCounter >= 15) {
 							digitalWrite(0,LOW);
 							warningCounter = 0;
 						} else {
@@ -176,8 +177,6 @@ int main()
 						}
 					 }
             }
-
-            //full_object_detection s = shapes[0];
 
             // Display it all on the screen
             win.clear_overlay();
