@@ -129,8 +129,8 @@ int main()
                 double leftRatio = (leftMaxX - leftMinX) / (leftMaxY - leftMinY);
                 double rightRatio = (rightMaxX - rightMinX) / (rightMaxY - rightMinY);
 
-                cout << leftRatio << "\n";
-                cout << rightRatio << "\n";
+                cout << "Current Left Ratio: " << leftRatio << "\n";
+                cout << "Current Right Ratio: " << rightRatio << "\n";
 
                 if (initialIterations < 10)
                 {
@@ -151,10 +151,12 @@ int main()
                 else
                 {
                     cout << "Left avg: " << leftAvg << "\n";
+						  cout << "Right avg: " << rightAvg << "\n";
+
                     cout.flush();
-                    if (leftRatio / leftAvg > 1.3 && rightRatio / rightAvg > 1.3)
+                    if (leftRatio / leftAvg > 1.25 && rightRatio / rightAvg > 1.25)
                     {
-                        cout << "WOOOOOOOOOO";
+                        cout << "Wake Up!\n";
 								if(blinkCount < 7) {
 									blinkCount++;
 								} else {
@@ -162,8 +164,6 @@ int main()
 									warningCounter++;
 									blinkCount = 0;
 								}
-
-                        //cout.flush();
 							} else {
 								blinkCount = 0;
 							}
